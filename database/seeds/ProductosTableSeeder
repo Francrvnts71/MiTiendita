@@ -1,0 +1,47 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+use App\Productos;
+
+/**
+ * 
+ */
+class ProductosTableSeeder extends Seeder
+{
+	
+	public function run()
+	{
+		$data = array (
+			[
+				'nombre' => 'Galletas',
+				'descripcion' => 'buenas',
+				'stock' => 17,
+				'imagen' => 'galletas.jpg',
+				'codigobarras' => '01234',
+				'precio_unitario' => 7,
+				'precio_venta' => 10
+			],
+			[
+				'nombre' => 'Sabritas',
+				'descripcion' => 'saladas',
+				'stock' => 15,
+				'imagen' => 'sabritas.jpg',
+				'codigobarras' => '45678',
+				'precio_unitario' => 10,
+				'precio_venta' => 15
+			],
+			[
+				'nombre' => 'Soda',
+				'descripcion' => 'coca-cola',
+				'stock' => 50,
+				'imagen' => 'cocacola.jpg',
+				'codigobarras' => '98765',
+				'precio_unitario' => 12,
+				'precio_venta' => 17
+			]
+
+		);
+		Productos::insert($data);
+	}
+}
